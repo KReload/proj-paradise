@@ -1,11 +1,22 @@
 #pragma once
 #include <string>
-#include <map>
+#include <vector>
 
 enum Categorie {Petite,Moyenne,Grosse,Piege};
 
+class Lieu{
+	std::vector<std::string> _villeP;
+	std::vector<std::string> _villeM;
+	std::vector<std::string> _villeG;
+	std::vector<std::string> _villePG;
+public:
+	Lieu();
+	std::string villeP();
+	std::string villeM();
+	std::string villeG();
 
-std::string petitesVilles[] = {"Bouc étourdi","Longcochon","Arnac La Poste","Monteton","La Baffe","Vatan","Trécon","Rochefourchat","La Ville aux Bois"};
+};
+
 
 
 
