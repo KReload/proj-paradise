@@ -7,8 +7,9 @@ int main()
 {
     srand(time(NULL));
     Lieu l;
-    std::cout<<l.villeP()<<std::endl;
+    std::cout<<Lieu:: villeP()<<std::endl;
     TransactionDebutant a;
-    std::cout << a.toString() << a.evaluate()<<std::endl;
+    std::cout << a.toString() <<std::endl;
+    
     return 1;
 }

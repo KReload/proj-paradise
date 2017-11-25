@@ -5,16 +5,16 @@
 enum Categorie {Petite,Moyenne,Grosse,Piege};
 
 class Lieu{
-	std::vector<std::string> _villeP;
-	std::vector<std::string> _villeM;
-	std::vector<std::string> _villeG;
-	std::vector<std::string> _villePG;
 public:
-	Lieu();
-	std::string villeP();
-	std::string villeM();
-	std::string villeG();
-
+    Lieu();
+	static std::string villeP();
+	static std::string villeM();
+	static std::string villeG();
+protected:
+    static std::vector<std::string> _villeP;
+	static std::vector<std::string> _villeM;
+	static std::vector<std::string> _villeG;
+	static std::vector<std::string> _villePG;
 };
 
 
