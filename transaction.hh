@@ -15,4 +15,5 @@ protected:
     int _montant;
     std::string _lieux;
     float _preussite;
+    Lieu _l;
 };

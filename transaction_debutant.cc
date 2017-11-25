@@ -5,13 +5,14 @@
 TransactionDebutant::TransactionDebutant() : Transaction()
 {
     _montant = (rand()%10 + 1)*1000;
+    _lieux= _l.villeP();
     _nom = std::string("ok");
     
 }
 
 std::string TransactionDebutant::toString()
 {
-    return _nom;
+    return _lieux;
 }
 
 int TransactionDebutant::evaluate()
