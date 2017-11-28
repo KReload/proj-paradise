@@ -5,9 +5,9 @@
 TransactionDebutant::TransactionDebutant() : Transaction()
 {
     _montant = (rand()%10 + 1)*1000;
-    _lieux= Lieu::villeP();
     _nom = std::string("PetiteTransacName");
-    
+    _lieux = Lieu:: villeP();
+
 }
 
 std::string TransactionDebutant::toString()
@@ -15,7 +15,7 @@ std::string TransactionDebutant::toString()
     std::string description = "\n~Petite Transaction~";
     description += "\n";
     description += _nom;
-    description += "\nLocaux situés à ";
+    description += "\nLocaux situes a ";
     description += _lieux;
     description += "\n";
     description += std::to_string(_montant); 
