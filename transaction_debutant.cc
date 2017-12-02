@@ -6,8 +6,8 @@ TransactionDebutant::TransactionDebutant() : Transaction()
 {
     _montant = (rand()%10 + 1)*1000;
     _lieux= Lieu::villeP();
-    _nom = std::string("PetiteTransacName");
-    
+    _nom = Nom::nomP();
+    _preussite = 100-(_montant/1000*5)-(rand()%30);
 }
 
 std::string TransactionDebutant::toString()
@@ -24,6 +24,14 @@ std::string TransactionDebutant::toString()
 }
 
 int TransactionDebutant::evaluate()
+{
+	if((rand()%100)>_preussite){
+		return -_montant;
+	}
+    return _montant/2+rand()%5*_montant/10;
+}
+
+int TransactionDebutant::montant()
 {
     return _montant;
 }
