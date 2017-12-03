@@ -7,5 +7,6 @@ public:
     TransactionDebutant();
     std::string toString();
     int evaluate();
+    int montant();
 };
 

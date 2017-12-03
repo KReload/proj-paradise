@@ -2,14 +2,17 @@
 #include <iostream>
 #include <ctime>
 #include "lieux.hh"
+#include "nom.hh"
+#include "joueur_debutant.hh"
 
 int main()
 {
     srand(time(NULL));
     Lieu l;
-    std::cout<<Lieu:: villeP()<<std::endl;
-    TransactionDebutant a;
-    std::cout << a.toString() <<std::endl;
-    
+    Nom n;
+    Joueur_debutant j;
+    while(j.capital()>0){
+    	j.jouer();
+    }
     return 1;
 }

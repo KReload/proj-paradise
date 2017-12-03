@@ -14,7 +14,6 @@ protected:
     static std::vector<std::string> _villeP;
 	static std::vector<std::string> _villeM;
 	static std::vector<std::string> _villeG;
-	static std::vector<std::string> _villePG;
 };
 
 
