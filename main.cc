@@ -3,15 +3,16 @@
 #include <ctime>
 #include "lieux.hh"
 #include "nom.hh"
+#include "joueur_debutant.hh"
 
 int main()
 {
     srand(time(NULL));
     Lieu l;
     Nom n;
-    TransactionDebutant a;
-    std::cout << a.toString() <<std::endl;
-    std::cout << a.evaluate() <<std::endl;
-    std::cout << a.montant() <<std::endl;
+    Joueur_debutant j;
+    while(j.capital()>0){
+    	j.jouer();
+    }
     return 1;
 }
