@@ -10,9 +10,15 @@ int main()
     srand(time(NULL));
     Lieu l;
     Nom n;
-    Joueur_debutant j;
-    while(j.capital()>0){
-    	j.jouer();
+    Joueur_debutant d;
+    Joueur * j;
+    j=&d;
+    while(j->capital()>0){
+    	j->jouer();
+    	if(j->capital()>50000){
+
+
+    	}
     }
     return 1;
 }

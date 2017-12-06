@@ -7,7 +7,7 @@ Joueur_debutant :: Joueur_debutant(){
 	std::cout<<"Veuillez donné votre nom : "<<std::endl;
 	std::cin>>nom;
 	_nom=nom;
-	_capital=2000;
+	_capital=10000;
 }
 
  int Joueur_debutant:: capital(){
@@ -25,9 +25,23 @@ void Joueur_debutant::jouer(){
 		std::cout<<i+1<<"\t|\t";
 		std::cout<<transactions[i].toString()<<std::endl;
 	}
-	int n;
+	int n=-1;
+	std::string tmp;
 	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer :\n"<<std::endl;
-	std::cin>>n;
+	
+	while(1>n or n>10){
+		try{
+			std::cin>>tmp;
+			n =std::stoi(tmp);
+			if(1>n or n>10){
+				throw std::exception();
+			}
+		}
+		catch(std::exception e){
+			std::cout<<"\nErreur de format. Veuillez tapper un n° de transaction.\n"<<std::endl;
+		}
+	}
+
 	int res;
 
 	res=transactions[n-1].evaluate();

@@ -17,7 +17,7 @@ std::string TransactionDebutant::toString()
     description += _lieux;
     description += "\t|\t";
     description += std::to_string(_montant); 
-
+    description += "\n----------------------------------------------------------------------------";
     return description;
 }
 
