@@ -8,6 +8,7 @@ class Joueur_debutant :public Joueur{
 		Joueur_debutant(Joueur_debutant &);
 		void jouer();
 		int capital();
-		std::string nom();	
+		std::string nom();
+	
 
 };

@@ -17,7 +17,7 @@ TransactionFake::TransactionFake() : Transaction()
     _suspicionRate = _montant/100000*(rand()%40);
 
     
-    std::cout << "On a presque fini, il faut juste que tu me dises à quel endroit tu veux que l'argent parte"
+    std::cout << "On a presque fini, il faut juste que tu me dises à quel endroit tu veux que l'argent parte"<<std::endl;
     std::cin >> _lieux;
     _preussite = 100-(_montant/10000*4)-(rand()%30);
 }
@@ -33,7 +33,7 @@ std::string TransactionFake::toString()
     description += "\t|\t";
     description += std::to_string(_preussite);
     description += "\t|\t";
-    description += std::to_string("Détournement");  
+    description += "Détournement";  
 
     return description;
 }
