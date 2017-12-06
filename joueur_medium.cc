@@ -3,7 +3,8 @@
 #include <vector>
 
 Joueur_medium :: Joueur_medium(Joueur_debutant & j):Joueur_debutant(j){
-
+	_taux_suspicion=0;
+	_score=0;
 }
 
  int Joueur_medium:: capital(){
@@ -23,13 +24,14 @@ void Joueur_medium::jouer(){
 	}
 	int n=-1;
 	std::string tmp;
-	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer :\n"<<std::endl;
+	std::cout<<Message::MessageM()<<std::endl;
+	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer ou 0 pour effectuer un fausse transaction :\n"<<std::endl;
 	
-	while(1>n or n>10){
+	while(0>n or n>10){
 		try{
 			std::cin>>tmp;
 			n =std::stoi(tmp);
-			if(1>n or n>10){
+			if(0>n or n>10){
 				throw std::exception();
 			}
 		}
@@ -39,6 +41,20 @@ void Joueur_medium::jouer(){
 	}
 
 	int res;
+	if(n==0){
+		TransactionFake f;
+		int c=f.evaluate();
+		if(c<0){
+			_capital+=c;
+		}
+		else{
+			_capital-=c;
+			_score+=c;
+		}
+		_taux_suspicion+=f.suspicion();
+		std::cout<<"Le trader "<<_nom<<" a un capital de "<<_capital<<" € et un score de "<<_score<<" € de détournés\n"<<std::endl;
+		return;
+	}
 
 	res=transactions[n-1].evaluate();
 	if(_capital<transactions[n-1].montant()){
@@ -53,10 +69,14 @@ void Joueur_medium::jouer(){
 	else{
 		std::cout<<"\nBien jouer vous avez gagnez "<<res<<" €"<<std::endl;
 	}
-	std::cout<<"Votre capital est de "<<_capital<<" €\n"<<std::endl;
+	std::cout<<"Le trader "<<_nom<<" a un capital de "<<_capital<<" € et un score de "<<_score<<" € de détournés\n"<<std::endl;
 	return;
 }
 
 void Joueur_medium::maj(Joueur_debutant & j){
 	_capital=j.capital();
+}
+
+int Joueur_medium::suspicion(){
+	return _taux_suspicion;
 }

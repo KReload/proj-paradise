@@ -1,6 +1,7 @@
 #include "transaction_debutant.hh"
 #include <iostream>
 #include <ctime>
+#include <unistd.h>
 #include "lieux.hh"
 #include "message.hh"
 #include "nom.hh"
@@ -26,12 +27,22 @@ int main()
     Joueur * j;
     j=&d;
     Joueur_medium m(d);
-
+    int i=1;
+    std::cout<<"\n Vous venez d'être engagé chez Poly Bankers Agency, vous êtes un stagiaire qui cherche à faire ses preuves" << std::endl;
+    std::cout <<" dans le monde hostile du trading. Vous commencez avec un capital de "<<d.capital()<<" € et vous espérez en sortir riche et beau." << std::endl;
+    std::cout <<" Bienvenue dans la famille et souvenez vous, aucune transaction est gagnée d'avance ...\n"<<std::endl;
+    sleep(5);
     while(j->capital()>0){
     	j->jouer();
-    	if(j->capital()>50000){
+    	if(j->capital()>50000 and i==1){
+    		i=0;
     		m.maj(d);
     		j= &m;
+    		std::cout<<"Bien joué!! Le patron t'as promu."<<std::endl;
+    	}
+    	if(i==0 and j->suspicion()>100){
+	    	std::cout <<"suspicion a + de 100%"<<std::endl;	
+    		break;
     	}
     }
 
