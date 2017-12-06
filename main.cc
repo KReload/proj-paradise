@@ -5,6 +5,7 @@
 #include "message.hh"
 #include "nom.hh"
 #include "joueur_debutant.hh"
+#include "joueur_medium.hh"
 
 int main()
 {
@@ -24,12 +25,15 @@ int main()
     Joueur_debutant d;
     Joueur * j;
     j=&d;
+    Joueur_medium m(d);
+
     while(j->capital()>0){
     	j->jouer();
     	if(j->capital()>50000){
-
-
+    		m.maj(d);
+    		j= &m;
     	}
     }
+
     return 1;
 }

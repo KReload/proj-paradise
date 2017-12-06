@@ -1,41 +1,28 @@
-
-#include "joueur_debutant.hh"
-#include "message.hh"
+#include "joueur_medium.hh"
 #include <string>
 #include <vector>
 
-Joueur_debutant :: Joueur_debutant(){
-	std::string nom;
-	std::cout<<"Veuillez donné votre nom : "<<std::endl;
-	std::cin>>nom;
-	_nom=nom;
-	_capital=60000;
+Joueur_medium :: Joueur_medium(Joueur_debutant & j):Joueur_debutant(j){
+
 }
 
-Joueur_debutant :: Joueur_debutant(Joueur_debutant & j){
-	_nom=j.nom();
-	_capital=j.capital();
-}
-
- int Joueur_debutant:: capital(){
+ int Joueur_medium:: capital(){
 	return _capital;
 }
 
-void Joueur_debutant::jouer(){
-	std::vector<TransactionDebutant> transactions;
+void Joueur_medium::jouer(){
+	std::vector<TransactionMedium> transactions;
 	int i=0;
 	for(i=0;i<10;i++){
-		transactions.push_back(TransactionDebutant());
+		transactions.push_back(TransactionMedium());
 	}
-	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\n"<<std::endl;
+	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\t\t|\t% de reussite\n"<<std::endl;
 	for(i=0;i<10;i++){
 		std::cout<<i+1<<"\t|\t";
 		std::cout<<transactions[i].toString()<<std::endl;
-		
 	}
 	int n=-1;
 	std::string tmp;
-	std::cout<<Message::MessageP()<<std::endl;
 	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer :\n"<<std::endl;
 	
 	while(1>n or n>10){
@@ -70,6 +57,6 @@ void Joueur_debutant::jouer(){
 	return;
 }
 
-std::string Joueur_debutant:: nom(){
-	return _nom;
+void Joueur_medium::maj(Joueur_debutant & j){
+	_capital=j.capital();
 }
