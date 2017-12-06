@@ -5,7 +5,9 @@
 class Joueur_debutant :public Joueur{
 	public:
 		Joueur_debutant();
+		Joueur_debutant(Joueur_debutant &);
 		void jouer();
-		int capital();	
+		int capital();
+		std::string nom();	
 
 };

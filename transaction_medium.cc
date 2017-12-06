@@ -18,8 +18,9 @@ std::string TransactionMedium::toString()
     description += _lieux;
     description += "\t|\t";
     description += std::to_string(_montant);
-    description += "\t|\t";
+    description += "\t\t|\t";
     description += std::to_string(_preussite); 
+    description += "\n-----------------------------------------------------------------------------------------------------";
 
     return description;
 }
