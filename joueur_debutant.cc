@@ -7,7 +7,7 @@ Joueur_debutant :: Joueur_debutant(){
 	std::cout<<"Veuillez donné votre nom : "<<std::endl;
 	std::cin>>nom;
 	_nom=nom;
-	_capital=2000;
+	_capital=10000;
 }
 
  int Joueur_debutant:: capital(){
