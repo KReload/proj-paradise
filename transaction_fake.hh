@@ -1,7 +1,7 @@
 #pragma once
-#include "transaction_debutant.hh"
+#include "transaction.hh"
 
-class TransactionFake : public TransactionDebutant
+class TransactionFake : public Transaction
 {
 public:
     TransactionFake();

@@ -1,4 +1,6 @@
+
 #include "joueur_debutant.hh"
+#include "message.hh"
 #include <string>
 #include <vector>
 
@@ -24,9 +26,11 @@ void Joueur_debutant::jouer(){
 	for(i=0;i<10;i++){
 		std::cout<<i+1<<"\t|\t";
 		std::cout<<transactions[i].toString()<<std::endl;
+		
 	}
 	int n=-1;
 	std::string tmp;
+	std::cout<<Message::MessageP()<<std::endl;
 	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer :\n"<<std::endl;
 	
 	while(1>n or n>10){
