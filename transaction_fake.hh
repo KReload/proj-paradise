@@ -8,6 +8,7 @@ public:
     std::string toString();
     int evaluate();
     int montant();
+    int suspicion()
 protected:
     int _suspicionRate;
 };

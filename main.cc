@@ -18,7 +18,7 @@ int main()
     std::cout << "                                                        Money is power \n" << std::endl;
     srand(time(NULL));
     Lieu l;
-    Message m;
+    Message a;
     Nom n;
 
 
