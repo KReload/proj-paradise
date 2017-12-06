@@ -38,7 +38,7 @@ std::string TransactionFake::toString()
     return description;
 }
 
-int TransactionMedium::evaluate()
+int TransactionFake::evaluate()
 {
     //Retourne un score et pas un montant
 	if((rand()%100)>_preussite){
@@ -47,11 +47,15 @@ int TransactionMedium::evaluate()
     return _montant;
 }
 
-int TransactionMedium::montant()
+int TransactionFake::montant()
 {
     return _montant;
 }
 
+int TransactionFake::suspicion()
+{
+    return _suspicionRate;
+}
 
 
 
