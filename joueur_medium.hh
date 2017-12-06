@@ -2,6 +2,7 @@
 #include "joueur.hh"
 #include "transaction_medium.hh"
 #include "joueur_debutant.hh"
+#include "transaction_fake.hh"
 
 class Joueur_medium :public Joueur_debutant{
 	public:
@@ -9,5 +10,8 @@ class Joueur_medium :public Joueur_debutant{
 		void jouer();
 		int capital();
 		void maj(Joueur_debutant &j);
+	private:
+		int taux_suspicion;
+		int score;
 
 };
