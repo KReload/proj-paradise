@@ -56,7 +56,7 @@ std::string Lieu:: villeP(){
 
 std::string Lieu:: villeM(){
 	int index;
-	if(!Lieu::_villeP.empty())
+	if(!Lieu::_villeM.empty())
 	{
 		index = rand()%(Lieu::_villeM.size());
 		return Lieu::_villeM[index];

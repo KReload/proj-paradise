@@ -56,7 +56,7 @@ std::string Nom:: nomP(){
 
 std::string Nom:: nomM(){
   int index;
-  if(!Nom::_nomP.empty())
+  if(!Nom::_nomM.empty())
   {
     index = rand()%(Nom::_nomM.size());
     return Nom::_nomM[index];
