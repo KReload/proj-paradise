@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "build tp1",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Wall","main.cc","joueur_medium.cc", "transaction_debutant.cc","message.cc","transaction_medium.cc", "nom.cc","joueur_debutant.cc","joueur.cc","lieux.cc", "transaction.cc", "-lmingw32", "-o", "main"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
