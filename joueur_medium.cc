@@ -18,7 +18,7 @@ void Joueur_medium::jouer(){
 	for(i=0;i<10;i++){
 		transactions.push_back(TransactionMedium());
 	}
-	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\t\t|\t% de reussite\n"<<std::endl;
+	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\t\t|   chance de succès\n"<<std::endl;
 	for(i=0;i<10;i++){
 		std::cout<<i+1<<"\t|\t";
 		std::cout<<transactions[i].toString()<<std::endl;
@@ -26,7 +26,7 @@ void Joueur_medium::jouer(){
 	int n=-1;
 	std::string tmp;
 	std::cout<<Message::MessageM()<<std::endl;
-	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer ou 0 pour effectuer un fausse transaction :\n"<<std::endl;
+	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer ou 0 pour effectuer une fausse transaction :\n"<<std::endl;
 	
 	while(0>n or n>10){
 		try{
@@ -68,7 +68,7 @@ void Joueur_medium::jouer(){
 		std::cout<<"\nAhh quelle erreur vous perdez "<<-res<<" €"<<std::endl;
 	}
 	else{
-		std::cout<<"\nBien jouer vous avez gagnez "<<res<<" €"<<std::endl;
+		std::cout<<"\nBien joué vous avez gagnez "<<res<<" €"<<std::endl;
 	}
 	std::cout<<"Le trader "<<_nom<<" a un capital de "<<_capital<<" € et un score de "<<_score<<" € de détournés\n"<<std::endl;
 	return;

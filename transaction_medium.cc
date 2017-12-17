@@ -14,12 +14,22 @@ TransactionMedium::TransactionMedium() : Transaction()
 std::string TransactionMedium::toString()
 {
     std::string description = _nom;
+    int i;
+    //alignement des noms
+    for(i=_lieux.length();i<7;i++){
+        description +=" ";
+    }
     description += "\t|\t";
     description += _lieux;
+    int j;
+    for(j=_lieux.length();j<17;j++){
+        description +=" ";
+    }
     description += "\t|\t";
     description += std::to_string(_montant);
     description += "\t\t|\t";
-    description += std::to_string(_preussite); 
+    description += std::to_string((int)_preussite); 
+    description += "%";
     description += "\n-----------------------------------------------------------------------------------------------------";
 
     return description;

@@ -9,7 +9,7 @@ Joueur_debutant :: Joueur_debutant(){
 	std::cout<<"Veuillez donné votre nom : "<<std::endl;
 	std::cin>>nom;
 	_nom=nom;
-	_capital=20000;
+	_capital=200000;
 }
 
 Joueur_debutant :: Joueur_debutant(Joueur_debutant & j){
@@ -64,7 +64,7 @@ void Joueur_debutant::jouer(){
 		std::cout<<"\nAhh quelle erreur vous perdez "<<-res<<" €"<<std::endl;
 	}
 	else{
-		std::cout<<"\nBien jouer vous avez gagnez "<<res<<" €"<<std::endl;
+		std::cout<<"\nBien joué vous avez gagnez "<<res<<" €"<<std::endl;
 	}
 	std::cout<<"Le stagiaire "<<_nom<<" a un capital de "<<_capital<<" €\n"<<std::endl;
 	return;

@@ -1,6 +1,7 @@
 #include "nom.hh"
 #include <fstream>
 #include <iostream>
+#include <algorithm>
 #include <string>
 
 std::vector<std::string> Nom::_nomP;
@@ -73,4 +74,25 @@ std::string Nom:: nomG(){
 
   }
   return std::string("");
+}
+
+bool Nom::isM(std::string s){
+  if(std::find(Nom::_nomM.begin(),Nom::_nomM.end(),s) != Nom::_nomM.end()){
+    return true;
+  }
+  return false;
+}
+
+bool Nom::isG(std::string s){
+  if(std::find(Nom::_nomG.begin(),Nom::_nomG.end(),s) != Nom::_nomG.end()){
+    return true;
+  }
+  return false;
+}
+
+bool Nom::isP(std::string s){
+  if(std::find(Nom::_nomP.begin(),Nom::_nomP.end(),s) != Nom::_nomP.end()){
+    return true;
+  }
+  return false;
 }
