@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 
+
 Joueur_medium :: Joueur_medium(Joueur_debutant & j):Joueur_debutant(j){
 	_taux_suspicion=0;
 	_score=0;
