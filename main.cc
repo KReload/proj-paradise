@@ -38,7 +38,7 @@ int main()
     		i=0;
     		m.maj(d);
     		j= &m;
-    		std::cout<<"Bien joué!! Le patron t'as promu."<<std::endl;
+    		std::cout<<"Bien joué!! Le patron t'a promu."<<std::endl;
     	}
     	if(i==0 and j->suspicion()>100){
 	    	std::cout <<"suspicion a + de 100%"<<std::endl;	

@@ -13,8 +13,17 @@ TransactionDebutant::TransactionDebutant() : Transaction()
 std::string TransactionDebutant::toString()
 {
     std::string description = _nom;
+    int j;
+    //alignement des nom
+    for(j=_lieux.length();j<7;j++){
+        description +=" ";
+    }
     description += "\t|\t";
     description += _lieux;
+    int i;
+    for(i=_lieux.length();i<17;i++){
+        description +=" ";
+    }
     description += "\t|\t";
     description += std::to_string(_montant); 
     description += "\n----------------------------------------------------------------------------";

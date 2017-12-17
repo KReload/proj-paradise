@@ -74,3 +74,25 @@ std::string Lieu:: villeG(){
 	}
 	return std::string("");
 }
+
+
+bool Lieu::isM(std::string s){
+  if(std::find(Lieu::_villeM.begin(),Lieu::_villeM.end(),s) != Lieu::_villeM.end()){
+    return true;
+  }
+  return false;
+}
+
+bool Lieu::isG(std::string s){
+  if(std::find(Lieu::_villeG.begin(),Lieu::_villeG.end(),s) != Lieu::_villeG.end()){
+    return true;
+  }
+  return false;
+}
+
+bool Lieu::isP(std::string s){
+  if(std::find(Lieu::_villeP.begin(),Lieu::_villeP.end(),s) != Lieu::_villeP.end()){
+    return true;
+  }
+  return false;
+}
