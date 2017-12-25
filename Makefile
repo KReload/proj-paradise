@@ -3,8 +3,8 @@ CFLAGS = -g -Wall
 EXEC_NAME = main
 INCLUDES =
 LIBS =
-OBJ_FILES = main.o lieux.o transaction.o transaction_debutant.o nom.o joueur.o joueur_debutant.o joueur_medium.o transaction_medium.o transaction_fake.o message.o
-FILES = main.cc lieux.cc transaction.cc transaction_debutant.cc nom.cc joueur.cc joueur_debutant.cc joueur_medium.cc transaction_medium.cc transaction_fake.cc message.cc
+OBJ_FILES = main.o lieux.o transaction.o transaction_debutant.o nom.o joueur.o joueur_debutant.o joueur_medium.o joueur_expert.o transaction_medium.o transaction_fake.o message.o
+FILES = main.cc lieux.cc transaction.cc transaction_debutant.cc nom.cc joueur.cc joueur_debutant.cc joueur_medium.cc joueur_expert.cc transaction_medium.cc transaction_fake.cc message.cc
 INSTALL_DIR =
 
 all : $(EXEC_NAME) 

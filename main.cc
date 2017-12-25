@@ -7,6 +7,7 @@
 #include "nom.hh"
 #include "joueur_debutant.hh"
 #include "joueur_medium.hh"
+#include "joueur_expert.hh"
 
 int main()
 {
@@ -27,6 +28,7 @@ int main()
     Joueur * j;
     j=&d;
     Joueur_medium m(d);
+    Joueur_expert e(m);
     int i=1;
     std::cout<<"\n Vous venez d'être engagé chez Poly Bankers Agency, vous êtes un stagiaire qui cherche à faire ses preuves" << std::endl;
     std::cout <<" dans le monde hostile du trading. Vous commencez avec un capital de "<<d.capital()<<" € et vous espérez en sortir riche et beau." << std::endl;
@@ -39,11 +41,18 @@ int main()
     		m.maj(d);
     		j= &m;
     		std::cout<<"Bien joué!! Le patron t'a promu."<<std::endl;
+        }
+        if(j->capital()>200000){
+    		i=0;
+    		e.maj(m);
+    		j= &e;
+    		std::cout<<"Le patron t'as nommé chef de l'équipe de trading."<<std::endl;
     	}
     	if(i==0 and j->suspicion()>100){
 	    	std::cout <<"suspicion a + de 100%"<<std::endl;	
     		break;
-    	}
+        }
+        
     }
 
     return 1;

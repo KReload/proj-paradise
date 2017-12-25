@@ -1,34 +1,31 @@
-#include "joueur_medium.hh"
+#include "joueur_expert.hh"
 #include <string>
 #include <vector>
 
 
-Joueur_medium :: Joueur_medium(Joueur_debutant & j):Joueur_debutant(j){
-	_taux_suspicion=0;
-	_score=0;
+Joueur_expert::Joueur_expert(Joueur_medium & j):Joueur_medium(j){
+	_taux_suspicion=j.suspicion();
+	_score=j.score();
 }
 
- int Joueur_medium:: capital(){
+ int Joueur_expert::capital(){
 	return _capital;
 }
-int Joueur_medium:: score(){
-	return _score;
-}
 
-void Joueur_medium::jouer(){
+void Joueur_expert::jouer(){
 	std::vector<TransactionMedium> transactions;
 	int i=0;
 	for(i=0;i<10;i++){
 		transactions.push_back(TransactionMedium());
 	}
-	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\t\t|   chance de succès\n"<<std::endl;
+	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\t\t|\tchance de succès\t|\tsuspicion\t\n"<<std::endl;
 	for(i=0;i<10;i++){
 		std::cout<<i+1<<"\t|\t";
 		std::cout<<transactions[i].toString()<<std::endl;
 	}
 	int n=-1;
 	std::string tmp;
-	std::cout<<Message::MessageM()<<std::endl;
+	std::cout<<Message::MessageG()<<std::endl;
 	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer ou 0 pour effectuer une fausse transaction :\n"<<std::endl;
 	
 	while(0>n or n>10){
@@ -77,10 +74,11 @@ void Joueur_medium::jouer(){
 	return;
 }
 
-void Joueur_medium::maj(Joueur_debutant & j){
-	_capital=j.capital();
+void Joueur_expert::maj(Joueur_medium & j){
+    _capital=j.capital();
+    _taux_suspicion=j.suspicion();
 }
 
-int Joueur_medium::suspicion(){
+int Joueur_expert::suspicion(){
 	return _taux_suspicion;
 }
