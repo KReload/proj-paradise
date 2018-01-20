@@ -21,7 +21,7 @@ void Joueur_medium::jouer(){
 	for(i=0;i<10;i++){
 		transactions.push_back(TransactionMedium());
 	}
-	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\t\t|   chance de succès\n"<<std::endl;
+	std::cout<<"n°\t|\tnom\t\t\t|\tlieu\t\t\t|\tmontant\t\t|   chance de succès\n"<<std::endl;
 	for(i=0;i<10;i++){
 		std::cout<<i+1<<"\t|\t";
 		std::cout<<transactions[i].toString()<<std::endl;
@@ -46,7 +46,7 @@ void Joueur_medium::jouer(){
 
 	int res;
 	if(n==0){
-		TransactionFake f;
+		TransactionFake f(0);
 		int c=f.evaluate();
 		if(c<0){
 			_capital+=c;

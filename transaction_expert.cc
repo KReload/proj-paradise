@@ -16,7 +16,7 @@ std::string TransactionExpert::toString()
     std::string description = _nom;
     int i;
     //alignement des noms
-    for(i=_lieux.length();i<7;i++){
+    for(i=_nom.length();i<17;i++){
         description +=" ";
     }
     description += "\t|\t";
@@ -30,7 +30,7 @@ std::string TransactionExpert::toString()
     description += "\t\t|\t";
     description += std::to_string((int)_preussite); 
     description += "%";
-    description += "\n-----------------------------------------------------------------------------------------------------";
+    description += "\n------------------------------------------------------------------------------------------------------------------";
 
     return description;
 }

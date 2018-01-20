@@ -27,7 +27,7 @@ void Joueur_debutant::jouer(){
 	for(i=0;i<10;i++){
 		transactions.push_back(TransactionDebutant());
 	}
-	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\n"<<std::endl;
+	std::cout<<"n°\t|\tnom\t\t\t|\tlieu\t\t\t|\tmontant\n"<<std::endl;
 	for(i=0;i<10;i++){
 		std::cout<<i+1<<"\t|\t";
 		std::cout<<transactions[i].toString()<<std::endl;

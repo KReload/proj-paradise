@@ -4,7 +4,6 @@
 class TransactionFake : public Transaction
 {
 public:
-    TransactionFake();
     TransactionFake(int i);
     std::string toString();
     int evaluate();

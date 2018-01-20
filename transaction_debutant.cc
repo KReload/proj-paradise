@@ -15,7 +15,7 @@ std::string TransactionDebutant::toString()
     std::string description = _nom;
     int j;
     //alignement des nom
-    for(j=_lieux.length();j<7;j++){
+    for(j=_nom.length();j<17;j++){
         description +=" ";
     }
     description += "\t|\t";
@@ -26,7 +26,7 @@ std::string TransactionDebutant::toString()
     }
     description += "\t|\t";
     description += std::to_string(_montant); 
-    description += "\n----------------------------------------------------------------------------";
+    description += "\n-----------------------------------------------------------------------------------------";
     return description;
 }
 
