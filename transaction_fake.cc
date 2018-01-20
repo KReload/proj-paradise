@@ -2,7 +2,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
-
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
 
 
 
@@ -118,16 +125,10 @@ int TransactionFake::evaluate()
 {
     //Retourne un score et pas un montant
 	if((rand()%100)>_preussite){
-<<<<<<< HEAD
-        std::cout<<"\nQuel dommage ta transaction c'est faite intercepter par la police\n"<<std::endl;
+        std::cout<<KRED<<"\nQuel dommage ta transaction c'est faite intercepter par la police\n"<<KNRM<<std::endl;
 		return -_montant;
-        
-=======
-		return -_montant;
-        std::cout<<"\nQuel dommage ta transaction c'est faite intercepté par la police\n"<<std::endl;
->>>>>>> b2ab8868e572ae3fb96ebcfefe560c4c9a81baf9
 	}
-    std::cout<<"\nBien joué ta fausse transaction a reussie\n"<<std::endl;
+    std::cout<<KGRN<<"\nBien joué ta fausse transaction a reussie\n"<<KNRM<<std::endl;
     return _montant;
 }
 
