@@ -22,7 +22,20 @@ TransactionFake::TransactionFake(int transac) : Transaction()
 
     std::cout << "Maintenant que le nom a été soigneusement choisi, il va falloir trouver un bon montant" << std::endl;
     std::cout << "Souviens toi, plus le montant est élevé, plus tu prends des risques" << std::endl;
-    std::cin >> _montant;
+    std::string tmp;
+    _montant=-1;
+    while(0>=_montant){
+        try{
+            std::cin>>tmp;
+            _montant =std::stoi(tmp);
+            if(0>_montant){
+                throw std::exception();
+            }
+        }
+        catch(std::exception e){
+            std::cout<<KRED<<"\nErreur de format. Veuillez tapper un montant.\n"<<KNRM<<std::endl;
+        }
+    }
 
     std::cout << "On a presque fini, il faut juste que tu me dises à quel endroit tu veux que l'argent parte"<<std::endl;
     std::cin >> _lieux;
