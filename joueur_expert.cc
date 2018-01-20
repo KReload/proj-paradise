@@ -1,7 +1,14 @@
 #include "joueur_expert.hh"
 #include <string>
 #include <vector>
-
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
 
 Joueur_expert::Joueur_expert(Joueur_medium & j):Joueur_medium(j){
 	_taux_suspicion=j.suspicion();
@@ -41,7 +48,7 @@ void Joueur_expert::jouer(){
 			}
 		}
 		catch(std::exception e){
-			std::cout<<"\nErreur de format. Veuillez tapper un n° de transaction.\n"<<std::endl;
+			std::cout<<KRED<<"\nErreur de format. Veuillez tapper un n° de transaction.\n"<<KNRM<<std::endl;
 		}
 	}
 
@@ -57,24 +64,25 @@ void Joueur_expert::jouer(){
 			_score+=c;
 		}
 		_taux_suspicion+=f.suspicion();
-		std::cout<<"Le trader "<<_nom<<" a un capital de "<<_capital<<" € et un score de "<<_score<<" € de détournés\n\nTaux de suspicion :"<<suspicion()<<"%\n\n"<<std::endl;
+		std::cout<<"Le trader "<<_nom<<" a un capital de "<<KBLU<<_capital<<KNRM<<" € et un score de "<<KBLU<<_score<<KNRM<<" € de détournés\n\nTaux de suspicion :"<<KBLU<<suspicion()<<KNRM<<"%\n\n"<<std::endl;
 		return;
 	}
 
 	res=transactions[n-1].evaluate();
 	if(_capital<transactions[n-1].montant()){
-		std::cout<< "\nAh il semblerait que vous ne possédiez pas assez d'argent pour faire cette transaction.\nOn va vous faire un pret mais on récupèrera 50% des gains." <<std::endl;
+		std::cout<<KRED<< "\nAh il semblerait que vous ne possédiez pas assez d'argent pour faire cette transaction.\nOn va vous faire un pret mais on récupèrera 50% des gains." <<KNRM<<std::endl;
 		res=res-(abs(res)/2);
 	}
 
 	_capital+=res;
 	if(res<0){
-		std::cout<<"\nAhh quelle erreur vous perdez "<<-res<<" €"<<std::endl;
+		std::cout<<KRED<<"\nAhh quelle erreur vous perdez "<<-res<<" €"<<KNRM<<std::endl;
 	}
 	else{
-		std::cout<<"\nBien joué vous avez gagnez "<<res<<" €"<<std::endl;
+		std::cout<<KGRN<<"\nBien joué vous avez gagnez "<<res<<" €"<<KNRM<<std::endl;
 	}
-	std::cout<<"Le trader "<<_nom<<" a un capital de "<<_capital<<" € et un score de "<<_score<<" € de détournés\n"<<std::endl;
+
+	std::cout<<"Le trader "<<_nom<<" a un capital de "<<KBLU<<_capital<<KNRM<<" € et un score de "<<KBLU<<_score<<KNRM<<" € de détournés\n\nTaux de suspicion :"<<KBLU<<suspicion()<<KNRM<<"%\n\n"<<std::endl;
 	return;
 }
 

@@ -1,7 +1,14 @@
 #include "transaction_fake.hh"
 #include <cstdlib>
 #include <string>
-
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
 
 
 
@@ -14,14 +21,27 @@ TransactionFake::TransactionFake(int transac) : Transaction()
 
     std::cout << "Maintenant que le nom a été soigneusement choisi, il va falloir trouver un bon montant" << std::endl;
     std::cout << "Souviens toi, plus le montant est élevé, plus tu prends des risques" << std::endl;
-    std::cin >> _montant;
+    std::string tmp;
+    _montant=-1;
+    while(0>=_montant){
+        try{
+            std::cin>>tmp;
+            _montant =std::stoi(tmp);
+            if(0>_montant){
+                throw std::exception();
+            }
+        }
+        catch(std::exception e){
+            std::cout<<KRED<<"\nErreur de format. Veuillez tapper un montant.\n"<<KNRM<<std::endl;
+        }
+    }
 
     std::cout << "On a presque fini, il faut juste que tu me dises à quel endroit tu veux que l'argent parte"<<std::endl;
     std::cin >> _lieux;
 
     if(transac==0){
         //cas d'une transaction fausse de niveau medium
-        _suspicionRate = (_montant/100000)*(rand()%40);
+        _suspicionRate = ((float)_montant/100000.0)*(rand()%40);
 
         if (_montant < 10001){ //cas ou le montant correspond a une petite transaction
             if(Nom::isP(_nom)){//le nom est bien un nom de petite transaction
@@ -58,7 +78,7 @@ TransactionFake::TransactionFake(int transac) : Transaction()
     }
     else{
         //cas d'une transaction fausse de niveau expert
-        _suspicionRate = (_montant/1000000)*(rand()%40);
+        _suspicionRate = ((float)_montant/1000000.0)*(rand()%40);
 
         if (_montant < 10001){ //cas ou le montant correspond a une petite transaction
             if(Nom::isP(_nom)){//le nom est bien un nom de petite transaction
@@ -119,12 +139,11 @@ int TransactionFake::evaluate()
 {
     //Retourne un score et pas un montant
 	if((rand()%100)>_preussite){
-        std::cout<<"\nQuel dommage ta transaction c'est faite intercepter par la police\n"<<std::endl;
+        std::cout<<KRED<<"\nQuel dommage ta transaction c'est faite intercepter par la police\n"<<KNRM<<std::endl;
 		return -_montant;
-        
     }
     std::cout << *this;
-    std::cout<<"\nBien joué ta fausse transaction a reussie\n"<<std::endl;
+    std::cout<<KGRN<<"\nBien joué ta fausse transaction a reussie\n"<<KNRM<<std::endl;
     return _montant;
 }
 

@@ -12,5 +12,5 @@ public:
     int montant();
     int suspicion();
 protected:
-    int _suspicionRate;
+    float _suspicionRate;
 };
