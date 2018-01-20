@@ -12,17 +12,20 @@ Joueur_expert::Joueur_expert(Joueur_medium & j):Joueur_medium(j){
 	return _capital;
 }
 
+
 void Joueur_expert::jouer(){
-	std::vector<TransactionMedium> transactions;
+	std::vector<TransactionExpert> transactions;
 	int i=0;
 	for(i=0;i<10;i++){
-		transactions.push_back(TransactionMedium());
+		transactions.push_back(TransactionExpert());
 	}
 	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\t\t|\tchance de succès\t|\tsuspicion\t\n"<<std::endl;
 	for(i=0;i<10;i++){
 		std::cout<<i+1<<"\t|\t";
-		std::cout<<transactions[i].toString()<<std::endl;
+		std::cout<<transactions[i].toString()<< "\t\t";
+		std::cout<<suspicion()<<std::endl;
 	}
+	
 	int n=-1;
 	std::string tmp;
 	std::cout<<Message::MessageG()<<std::endl;

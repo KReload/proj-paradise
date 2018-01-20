@@ -1,2 +1,10 @@
-LilleZer
+Lille
 Marseille
+Nantes
+Rennes
+Saint-etienne
+Lyon
+Bordeaux
+Strasbourg
+Orléans
+Billyland

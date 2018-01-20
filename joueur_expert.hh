@@ -1,6 +1,6 @@
 #pragma once
 #include "joueur.hh"
-#include "transaction_medium.hh"
+#include "transaction_expert.hh"
 #include "joueur_medium.hh"
 #include "transaction_fake.hh"
 #include "message.hh"
