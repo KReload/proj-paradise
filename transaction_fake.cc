@@ -118,11 +118,16 @@ int TransactionFake::evaluate()
 {
     //Retourne un score et pas un montant
 	if((rand()%100)>_preussite){
+<<<<<<< HEAD
         std::cout<<"\nQuel dommage ta transaction c'est faite intercepter par la police\n"<<std::endl;
 		return -_montant;
         
+=======
+		return -_montant;
+        std::cout<<"\nQuel dommage ta transaction c'est faite intercepté par la police\n"<<std::endl;
+>>>>>>> b2ab8868e572ae3fb96ebcfefe560c4c9a81baf9
 	}
-    std::cout<<"\nBien jouer ta fausse transaction à reussi\n"<<std::endl;
+    std::cout<<"\nBien joué ta fausse transaction a reussie\n"<<std::endl;
     return _montant;
 }
 
