@@ -132,4 +132,3 @@ int TransactionFake::suspicion()
 }
 
 
-
