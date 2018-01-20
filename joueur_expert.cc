@@ -11,7 +11,9 @@ Joueur_expert::Joueur_expert(Joueur_medium & j):Joueur_medium(j){
  int Joueur_expert::capital(){
 	return _capital;
 }
-
+int Joueur_medium:: score(){
+	return _score;
+}
 
 void Joueur_expert::jouer(){
 	std::vector<TransactionExpert> transactions;
@@ -19,11 +21,10 @@ void Joueur_expert::jouer(){
 	for(i=0;i<10;i++){
 		transactions.push_back(TransactionExpert());
 	}
-	std::cout<<"n°\t|\tnom\t|\tlieu\t\t\t|\tmontant\t\t|\tchance de succès\t|\tsuspicion\t\n"<<std::endl;
+	std::cout<<"n°\t|\tnom\t\t\t|\tlieu\t\t\t|\tmontant\t\t|\tchance de succès\n"<<std::endl;
 	for(i=0;i<10;i++){
 		std::cout<<i+1<<"\t|\t";
-		std::cout<<transactions[i].toString()<< "\t\t";
-		std::cout<<suspicion()<<std::endl;
+		std::cout<<transactions[i].toString()<< std::endl;
 	}
 	
 	int n=-1;
@@ -46,7 +47,7 @@ void Joueur_expert::jouer(){
 
 	int res;
 	if(n==0){
-		TransactionFake f;
+		TransactionFake f(1);
 		int c=f.evaluate();
 		if(c<0){
 			_capital+=c;
@@ -56,7 +57,7 @@ void Joueur_expert::jouer(){
 			_score+=c;
 		}
 		_taux_suspicion+=f.suspicion();
-		std::cout<<"Le trader "<<_nom<<" a un capital de "<<_capital<<" € et un score de "<<_score<<" € de détournés\n"<<std::endl;
+		std::cout<<"Le trader "<<_nom<<" a un capital de "<<_capital<<" € et un score de "<<_score<<" € de détournés\n\nTaux de suspicion :"<<suspicion()<<"%\n\n"<<std::endl;
 		return;
 	}
 
@@ -80,6 +81,7 @@ void Joueur_expert::jouer(){
 void Joueur_expert::maj(Joueur_medium & j){
     _capital=j.capital();
     _taux_suspicion=j.suspicion();
+    _score=j.score();
 }
 
 int Joueur_expert::suspicion(){

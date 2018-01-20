@@ -13,6 +13,7 @@ public:
     virtual int capital() = 0;
     virtual void jouer() = 0;
     virtual int suspicion();
+    virtual int score();
 
 protected:
     std::string _nom;
