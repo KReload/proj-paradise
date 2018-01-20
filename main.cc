@@ -9,16 +9,25 @@
 #include "joueur_medium.hh"
 #include "joueur_expert.hh"
 
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
+
 
 int main()
 {
-    std::cout <<"    ____        _       _______            _         _____ _                 _       _              "<< std::endl;
+    std::cout <<KRED<<"    ____        _       _______            _         _____ _                 _       _              "<< std::endl;
     std::cout <<"   |  _ \\      | |     |__   __|          | |       / ____(_)               | |     | |             "<< std::endl;
     std::cout <<"   | |_) | ___ | |__      | |_ __ __ _  __| | ___  | (___  _ _ __ ___  _   _| | __ _| |_ ___  _ __  "<< std::endl;
     std::cout <<"   |  _ < / _ \\| '_ \\     | | '__/ _` |/ _` |/ _ \\  \\___ \\| | '_ ` _ \\| | | | |/ _` | __/ _ \\| '__| "<< std::endl;
     std::cout <<"   | |_) | (_) | |_) |    | | | | (_| | (_| |  __/  ____) | | | | | | | |_| | | (_| | || (_) | |    "<< std::endl;
     std::cout <<"   |____/ \\___/|_.__/     |_|_|  \\__,_|\\__,_|\\___| |_____/|_|_| |_| |_|\\__,_|_|\\__,_|\\__\\___/|_|    "<< std::endl;
-    std::cout << "                                                        Money is power \xa9 \n" << std::endl;
+    std::cout << "                                                        Money is power \xa9 \n" <<KNRM<< std::endl;
     srand(time(NULL));
     Lieu l;
     Message a;
