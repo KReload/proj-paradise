@@ -1,5 +1,4 @@
 #include "transaction_fake.hh"
-#include <iostream>
 #include <cstdlib>
 #include <string>
 
@@ -114,13 +113,17 @@ std::string TransactionFake::toString()
     return description;
 }
 
+
+
 int TransactionFake::evaluate()
 {
     //Retourne un score et pas un montant
 	if((rand()%100)>_preussite){
+        std::cout<<"\nQuel dommage ta transaction c'est faite intercepter par la police\n"<<std::endl;
 		return -_montant;
-        std::cout<<"\nQuel dommage ta transaction c'est faite intercepté par la police\n"<<std::endl;
-	}
+        
+    }
+    std::cout << *this;
     std::cout<<"\nBien joué ta fausse transaction a reussie\n"<<std::endl;
     return _montant;
 }
@@ -135,4 +138,10 @@ int TransactionFake::suspicion()
     return _suspicionRate;
 }
 
+
+std::ostream& operator<<(std::ostream& os, TransactionFake& fake)  
+{  
+    os << "Ton taux de suspicion augmente de " << fake.suspicion() << "\n";  
+    return os;  
+} 
 

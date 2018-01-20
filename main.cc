@@ -53,7 +53,7 @@ int main()
             std::cout << "\x1B[2J\x1B[H"<<std::endl;
 
             std::cout<<"\n\nBRAVO !!!! \n\nLe patron t'as embauché en tant que trader tu n'es plus un stagiaire.\n"<<std::endl;
-            std::cout<<"\nTu viens de débloquer de nouvelles compétences:\n-tu peux maintenant voir, grâce ton expérience, la probabilité de réussite des transactions\n-tu peux faire des fausses transactions\n"<<std::endl;
+            std::cout<<"\nTu viens de débloquer de nouvelles compétences:\n-Tu peux maintenant voir, grâce ton expérience, la probabilité de réussite des transactions\n-Tu peux faire des fausses transactions\n"<<std::endl;
             sleep(5);
             std::cout << "\n\n\nPour effectuer une fausse transaction appuie sur 0 au moment du choix des transactions et suis les instructions\n\n"<<std::endl;
             sleep(5);
@@ -67,13 +67,13 @@ int main()
             std::cout << "\x1B[2J\x1B[H"<<std::endl;
 
     		std::cout<<"\n\nBRAVO !!!! \n\nLe patron t'as nommé chef de l'équipe de trading.\n"<<std::endl;
-            std::cout<<"\nTu viens de débloquer de nouvelles compétences:\n-tu peux maintenant voir, grâce ton expérience, le taux de suspicion que la brigade anti-fraude à sur toi\n-tu peux maintenant avoir l'opportunité de réduire ton taux de suspicion alors reste attentif.\n"<<std::endl;
+            std::cout<<"\nTu viens de débloquer de nouvelles compétences:\n-Tu peux maintenant voir, grâce ton expérience, le taux de suspicion que la brigade anti-fraude à sur toi\n-Tu peux maintenant avoir l'opportunité de réduire ton taux de suspicion alors reste attentif.\n"<<std::endl;
             sleep(5);
-            std::cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t tape OK pour continuer\n"<<std::endl;
+            std::cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t Tape OK pour continuer\n"<<std::endl;
             std::cin>>tmp;
     	}
     	if(i==0 and j->suspicion()>100){
-	    	std::cout <<"suspicion a + de 100%"<<std::endl;	
+	    	std::cout <<"La conformité t'as repéré, tu as été trop suspect"<<std::endl;	
     		break;
         }
         
