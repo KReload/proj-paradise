@@ -11,7 +11,7 @@ Joueur_expert::Joueur_expert(Joueur_medium & j):Joueur_medium(j){
  int Joueur_expert::capital(){
 	return _capital;
 }
-int Joueur_medium:: score(){
+int Joueur_expert:: score(){
 	return _score;
 }
 

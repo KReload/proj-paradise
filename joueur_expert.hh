@@ -12,6 +12,7 @@ public:
     int capital();
     void maj(Joueur_medium &j);
     int suspicion();
+    int score();
 private:
     int _taux_suspicion;
     int _score;

@@ -119,9 +119,9 @@ int TransactionFake::evaluate()
     //Retourne un score et pas un montant
 	if((rand()%100)>_preussite){
 		return -_montant;
-        std::cout<<"\nQuel dommage ta transaction c'est faite intercepter par la police\n"<<std::endl;
+        std::cout<<"\nQuel dommage ta transaction c'est faite intercepté par la police\n"<<std::endl;
 	}
-    std::cout<<"\nBien jouer ta fausse transaction à reussi\n"<<std::endl;
+    std::cout<<"\nBien joué ta fausse transaction a reussie\n"<<std::endl;
     return _montant;
 }
 
