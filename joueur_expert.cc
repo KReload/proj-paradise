@@ -74,7 +74,8 @@ void Joueur_expert::jouer(){
 	else{
 		std::cout<<"\nBien joué vous avez gagnez "<<res<<" €"<<std::endl;
 	}
-	std::cout<<"Le trader "<<_nom<<" a un capital de "<<_capital<<" € et un score de "<<_score<<" € de détournés\n"<<std::endl;
+	
+	std::cout<<"Le trader "<<_nom<<" a un capital de "<<_capital<<" € et un score de "<<_score<<" € de détournés\n\nTaux de suspicion :"<<suspicion()<<"%\n\n"<<std::endl;
 	return;
 }
 

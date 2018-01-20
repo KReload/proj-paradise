@@ -14,7 +14,7 @@ public:
     int suspicion();
     int score();
 private:
-    int _taux_suspicion;
+    float _taux_suspicion;
     int _score;
 
 };

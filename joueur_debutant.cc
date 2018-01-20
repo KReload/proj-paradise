@@ -9,7 +9,7 @@ Joueur_debutant :: Joueur_debutant(){
 	std::cout<<"Veuillez donné votre nom : "<<std::endl;
 	std::cin>>nom;
 	_nom=nom;
-	_capital=10000;
+	_capital=100000000;
 }
 
 Joueur_debutant :: Joueur_debutant(Joueur_debutant & j){
