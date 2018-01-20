@@ -22,7 +22,7 @@ TransactionFake::TransactionFake(int transac) : Transaction()
 
     if(transac==0){
         //cas d'une transaction fausse de niveau medium
-        _suspicionRate = _montant/100000*(rand()%40);
+        _suspicionRate = (_montant/100000)*(rand()%40);
 
         if (_montant < 10001){ //cas ou le montant correspond a une petite transaction
             if(Nom::isP(_nom)){//le nom est bien un nom de petite transaction
@@ -59,7 +59,7 @@ TransactionFake::TransactionFake(int transac) : Transaction()
     }
     else{
         //cas d'une transaction fausse de niveau expert
-        _suspicionRate = _montant/1000000*(rand()%40);
+        _suspicionRate = (_montant/1000000)*(rand()%40);
 
         if (_montant < 10001){ //cas ou le montant correspond a une petite transaction
             if(Nom::isP(_nom)){//le nom est bien un nom de petite transaction
