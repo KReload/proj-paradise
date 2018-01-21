@@ -74,6 +74,7 @@ void Joueur_debutant::jouer(){
 	}
 	int n=-1;
 	std::string tmp;
+	//affiche un message aleatoire
 	std::cout<<Message::MessageP()<<std::endl;
 	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer :\n"<<std::endl;
 	//attente d'un choix de la part d'un joueur.
@@ -122,10 +123,10 @@ void Joueur_debutant::eval(int res,int montant){
 }
 
 /**
- * \fn eval()
- * \brief Fonction qui effectue l'affichage en fonction du résultat de la transaction choisit.
+ * \fn nom()
+ * \brief Fonction de get pour recuperer le nom du joueur.
  *
- * \return rien.
+ * \return le nom du joueur.
  */
 std::string Joueur_debutant:: nom(){
 	return _nom;

@@ -66,7 +66,7 @@ int main()
             std::cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t tape OK pour continuer\n"<<std::endl;
             std::cin>>tmp;
         }
-        if(exp == 0 and i==0 and j->score()>200000){
+        if(exp == 0 and i==0 and j->score()>-200000){
             exp = 1;
     		e.maj(m);
     		j= &e;
