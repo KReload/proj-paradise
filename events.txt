@@ -1,0 +1,11 @@
+1 10 Le chef t'as pris en flagrant délit en train de contourner de l'argent ! Dire que c'est Jean-Pierre le fautif ?
+0 15 Bob veut t'emprunter un peu d'argent pour faire des activités. Faut-il que j'accepte ?
+1 20 Aïe aïe, la conformité est à l'autre bout de la porte et vous cherche. Se cacher ?
+0 5 Chocolatine ou pain au chocolat ? Votre patron vous regarde fixement et attend votre réponse... Oui ?
+0 10 Vous avez trouvé un fraudeur dans votre équipe, le dénoncer ?
+0 20 Vous pouvez détourner beaucoup d'actions !!! C'est votre chance !!! Le faire ?
+1 10 Vous avez un stylo dans la main... Jouer avec ?
+1 10 La fatigue approche, prendre un jour de repos ?
+0 15 Le patron est dans le coin, le fixer du regard ?
+0 10 Se pencher sur votre chaise ? 
+0 20 Vous avez un projet à finir ... Vous n'êtes pas serein ? 

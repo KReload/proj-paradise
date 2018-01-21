@@ -1,4 +1,5 @@
 #include "joueur_expert.hh"
+#include "event_surprise.hh"
 #include <string>
 #include <vector>
 #define KNRM  "\x1B[0m"
@@ -25,6 +26,7 @@ int Joueur_expert:: score(){
 void Joueur_expert::jouer(){
 	std::vector<TransactionExpert> transactions;
 	int i=0;
+	
 	for(i=0;i<10;i++){
 		transactions.push_back(TransactionExpert());
 	}
@@ -83,6 +85,18 @@ void Joueur_expert::jouer(){
 	}
 
 	std::cout<<"Le trader "<<_nom<<" a un capital de "<<KBLU<<_capital<<KNRM<<" € et un score de "<<KBLU<<_score<<KNRM<<" € de détournés\n\nTaux de suspicion :"<<KBLU<<suspicion()<<KNRM<<"%\n\n"<<std::endl;
+	
+	if(rand()%100>40)
+	{
+		int taux;
+		taux = EventSurprise::eventDeclenche();
+		if(_taux_suspicion < - taux)
+		{
+			_taux_suspicion = 0;
+		} else {
+			_taux_suspicion += taux;
+		}
+	}
 	return;
 }
 

@@ -1,4 +1,5 @@
 #include "transaction_debutant.hh"
+#include "event_surprise.hh"
 #include <iostream>
 #include <ctime>
 #include <unistd.h>
@@ -32,6 +33,7 @@ int main()
     std::cout << "                                                        Money is power \xa9 \n" <<KNRM<< std::endl;
     srand(time(NULL));
     Lieu l;
+    EventSurprise event;
     Message a;
     Nom n;
     Joueur_debutant d;
