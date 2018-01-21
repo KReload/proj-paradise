@@ -9,6 +9,8 @@ class Joueur_medium :public Joueur_debutant{
 	public:
 		Joueur_medium(Joueur_debutant & j);
 		void jouer();
+		void fake();
+		void eval(int res, int montant);
 		int capital();
 		void maj(Joueur_debutant &j);
 		int suspicion();
