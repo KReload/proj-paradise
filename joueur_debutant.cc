@@ -96,29 +96,37 @@ void Joueur_debutant::jouer(){
 
 /**
  * \fn eval()
- * \brief Fonction qui effectue un tour de jeu du joueur débutant.
+ * \brief Fonction qui effectue l'affichage en fonction du résultat de la transaction choisit.
  *
  * \return rien.
  */
 void Joueur_debutant::eval(int res,int montant){
 
-
+	//si le joueur a choiit une transaction alors qu'il n'a pas assez d'argent on lui annonce qu'il y a un pret et que par consequent il pert 50% des gain qu'il fait.
 	if(_capital<montant){
 		std::cout<<KRED<< "\nAh il semblerait que vous ne possédiez pas assez d'argent pour faire cette transaction.\nOn va vous faire un pret mais on récupèrera 50% des gains." <<KNRM<<std::endl;
 		res=res-(abs(res)/2);
 	}
 
+	//mise a jour du capital du joueur
 	_capital+=res;
-	if(res<0){
+	if(res<0){//si le resultat est négatif ca signifie que la transaction a echouer.
 		std::cout<<KRED<<"\nAhh quelle erreur vous perdez "<<-res<<" €"<<KNRM<<std::endl;
 	}
-	else{
+	else{//sinon la transaction a réussit
 		std::cout<<KGRN<<"\nBien joué vous avez gagnez "<<res<<" €"<<KNRM<<std::endl;
 	}
+	//affichage de l'etat du joueur.
 	std::cout<<"Le stagiaire "<<_nom<<" a un capital de "<<KBLU<<_capital<<KNRM<<" €\n"<<std::endl;
 	return;
 }
 
+/**
+ * \fn eval()
+ * \brief Fonction qui effectue l'affichage en fonction du résultat de la transaction choisit.
+ *
+ * \return rien.
+ */
 std::string Joueur_debutant:: nom(){
 	return _nom;
 }
