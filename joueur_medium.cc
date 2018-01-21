@@ -57,10 +57,10 @@ void Joueur_medium::jouer(){
 		TransactionFake f(0);
 		int c=f.evaluate();
 		if(c<0){
-			_capital+=c;
+			(*this)+=c;
 		}
 		else{
-			_capital-=c;
+			(*this)+=(-c);
 			_score+=c;
 		}
 		_taux_suspicion+=f.suspicion();
@@ -74,7 +74,7 @@ void Joueur_medium::jouer(){
 		res=res-(abs(res)/2);
 	}
 
-	_capital+=res;
+	(*this)+=res;
 	if(res<0){
 		std::cout<<KRED<<"\nAhh quelle erreur vous perdez "<<-res<<" €"<<KNRM<<std::endl;
 	}

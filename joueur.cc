@@ -12,3 +12,9 @@ int Joueur:: suspicion(){
 int Joueur:: score(){
 	return 0;
 }
+
+void Joueur::operator+=(int montant)
+{
+	_capital+=montant;
+	return;
+}
