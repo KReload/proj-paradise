@@ -70,7 +70,7 @@ void Joueur_expert::jouer(){
 	std::string tmp;
 	//affiche un message aleatoire
 	std::cout<<Message::MessageG()<<std::endl;
-	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer ou 0 pour effectuer une fausse transaction :\n"<<std::endl;
+	std::cout<<"\nVeuillez taper le n° de la transaction que vous souhaitez effectuer ou 0 pour effectuer une fausse transaction :\n"<<std::endl;
 	//attente d'un choix de la part d'un joueur.
 	while(0>n or n>10){
 		try{
@@ -81,7 +81,7 @@ void Joueur_expert::jouer(){
 			}
 		}
 		catch(std::exception e){//traite les cas ou le joueur rentre des valeur aberante ou des lettres
-			std::cout<<KRED<<"\nErreur de format. Veuillez tapper un n° de transaction.\n"<<KNRM<<std::endl;
+			std::cout<<KRED<<"\nErreur de format. Veuillez taper un n° de transaction.\n"<<KNRM<<std::endl;
 		}
 	}
 	if(n==0){

@@ -21,7 +21,7 @@
  */
 Joueur_debutant :: Joueur_debutant(){
 	std::string nom;
-	std::cout<<"Veuillez donné votre nom : "<<std::endl;
+	std::cout<<"Veuillez donner votre nom : "<<std::endl;
 	//demande au joueur de rentrer son nom
 	std::cin>>nom;
 	_nom=nom;
@@ -76,7 +76,7 @@ void Joueur_debutant::jouer(){
 	std::string tmp;
 	//affiche un message aleatoire
 	std::cout<<Message::MessageP()<<std::endl;
-	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer :\n"<<std::endl;
+	std::cout<<"\nVeuillez taper le n° de la transaction que vous souhaitez effectuer :\n"<<std::endl;
 	//attente d'un choix de la part d'un joueur.
 	while(1>n or n>10){
 		try{
@@ -87,7 +87,7 @@ void Joueur_debutant::jouer(){
 			}
 		}
 		catch(std::exception e){//traite les cas ou le joueur rentre des valeur aberante ou des lettres
-			std::cout<<KRED<<"\nErreur de format. Veuillez tapper un n° de transaction.\n"<<KNRM<<std::endl;
+			std::cout<<KRED<<"\nErreur de format. Veuillez taper un n° de transaction.\n"<<KNRM<<std::endl;
 		}
 	}
 	//lance l'affichage des résultats.

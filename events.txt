@@ -10,10 +10,10 @@
 0 10 Se pencher sur votre chaise ? 
 0 20 Vous avez un projet à finir ... Vous êtes serein ?
 0 20 Votre ordi vient de ce casser voulez vous le jeter?
-0 5 Vous avez locasion de proposer un pot-de-vin à la police. Vous tentez le coup?
-1 20 Vous avez locasion de proposer un pot-de-vin à la police. Vous tentez le coup?
-0 10 Un collegue vous propose de partir en vacance avec lui au caraibe vous accepté?
-1 10 Un collegue vous propose de partir en vacance avec lui au Etats-Unis vous accepté?
+0 5 Vous avez l'occasion de proposer un pot-de-vin à la police. Vous tentez le coup?
+1 20 Vous avez l'occasion de proposer un pot-de-vin à la police. Vous tentez le coup?
+0 10 Un collegue vous propose de partir en vacances avec lui aux caraïbe vous acceptez?
+1 10 Un collegue vous propose de partir en vacances avec lui aux Etats-Unis vous acceptez?
 1 10 Le patron vous propose de jouer à pile ou face avec lui. Vous choisissez pile?
 0 5 Le patron vous propose de jouer à pile ou face avec lui. Vous choisissez pile?
 0 5 Bob vous propose de faire un concours de boulette de papier. Vous acceptez?

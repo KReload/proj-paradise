@@ -65,7 +65,7 @@ void Joueur_medium::jouer(){
 	std::string tmp;
 	//affiche un message aleatoire
 	std::cout<<Message::MessageM()<<std::endl;
-	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer ou 0 pour effectuer une fausse transaction :\n"<<std::endl;
+	std::cout<<"\nVeuillez taper le n° de la transaction que vous souhaitez effectuer ou 0 pour effectuer une fausse transaction :\n"<<std::endl;
 	//attente d'un choix de la part d'un joueur.
 	while(0>n or n>10){
 		try{

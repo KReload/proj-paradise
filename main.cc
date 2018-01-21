@@ -96,7 +96,7 @@ int main()
     }
 
 
-
+std::cout<<"Vous avez perdu, vous avez fait un score de " << j->score() << "\n\n";
 
 std::cout<<KRED<<"    ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███      ▐██▌     ▐██▌     ▐██▌ "<<std::endl;
 std::cout<<"   ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒    ▐██▌     ▐██▌     ▐██▌ "<<std::endl;
