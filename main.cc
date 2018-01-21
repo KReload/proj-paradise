@@ -32,10 +32,12 @@ int main()
     std::cout <<"   |____/ \\___/|_.__/     |_|_|  \\__,_|\\__,_|\\___| |_____/|_|_| |_| |_|\\__,_|_|\\__,_|\\__\\___/|_|    "<< std::endl;
     std::cout << "                                                        Money is power \xa9 \n" <<KNRM<< std::endl;
     srand(time(NULL));
+    // Initialisation des fichiers Lieux, Events, Messages et Noms
     Lieu l;
     EventSurprise event;
     Message a;
     Nom n;
+
     Joueur_debutant d;
     Joueur * j;
     j=&d;
