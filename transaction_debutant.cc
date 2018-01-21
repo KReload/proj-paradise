@@ -34,7 +34,7 @@ std::string TransactionDebutant::toString()
     description += "\t|\t";
     description += _lieux;
     int i;
-    for(i=_lieux.length();i<17;i++){
+    for(i=_lieux.length();i<18;i++){
         description +=" ";
     }
     description += "\t|\t";
