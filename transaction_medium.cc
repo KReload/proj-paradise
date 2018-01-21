@@ -2,6 +2,13 @@
 #include <cstdlib>
 #include <string>
 
+
+/**
+ * \fn TransactionMedium()
+ * \brief Création d'une transaction medium
+ *
+ * \return Retourne rien
+ */
 TransactionMedium::TransactionMedium() : Transaction()
 {
     _montant = (rand()%10 + 1)*10000;
@@ -11,6 +18,12 @@ TransactionMedium::TransactionMedium() : Transaction()
 }
 
 
+/**
+ * \fn toString()
+ * \brief Retourne les paramètres d'une transaction
+ *
+ * \return Chaine de caractère
+ */
 std::string TransactionMedium::toString()
 {
     std::string description = _nom;
@@ -35,6 +48,13 @@ std::string TransactionMedium::toString()
     return description;
 }
 
+
+/**
+ * \fn evaluate()
+ * \brief Evalue si la transaction est réussie ou non
+ *
+ * \return Retourne le montant gagné ou perdu
+ */
 int TransactionMedium::evaluate()
 {
 	if((rand()%100)>_preussite){
@@ -43,6 +63,13 @@ int TransactionMedium::evaluate()
     return _montant+rand()%5*_montant/10;
 }
 
+
+/**
+ * \fn montant()
+ * \brief
+ *
+ * \return Retourne le montant de la transaction
+ */
 int TransactionMedium::montant()
 {
     return _montant;

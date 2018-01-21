@@ -47,6 +47,7 @@ std::string TransactionDebutant::toString()
 /**
  * \fn evaluate()
  * \brief Regarde si la transaction a réussi
+ *
  * \return Retourne le montant gagné ou perdu
  */
 int TransactionDebutant::evaluate()
@@ -60,6 +61,7 @@ int TransactionDebutant::evaluate()
 /**
  * \fn montant()
  * \brief 
+ *
  * \return Retourne le montant de la transaction
  */
 int TransactionDebutant::montant()

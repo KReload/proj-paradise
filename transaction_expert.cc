@@ -5,6 +5,7 @@
 /**
  * \fn TransactionExpert()
  * \brief Création transaction expert aléatoire
+ *
  * \return Retourne rien
  */
 TransactionExpert::TransactionExpert() : Transaction()
@@ -19,6 +20,7 @@ TransactionExpert::TransactionExpert() : Transaction()
 /**
  * \fn toString()
  * \brief Retourne les paramètres d'une transaction
+ *
  * \return Chaine de caractère
  */
 std::string TransactionExpert::toString()
@@ -46,8 +48,9 @@ std::string TransactionExpert::toString()
 }
 
 /**
- * \fn TransactionExpert()
+ * \fn evaluate()
  * \brief Evalue si la transaction est réussie ou non
+ *
  * \return Retourne le montant gagné ou perdu
  */
 int TransactionExpert::evaluate()
@@ -60,7 +63,8 @@ int TransactionExpert::evaluate()
 
 /**
  * \fn montant()
- * \brief 
+ * \brief
+ *
  * \return Retourne le montant de la transaction
  */
 int TransactionExpert::montant()

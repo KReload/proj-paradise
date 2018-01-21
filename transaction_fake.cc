@@ -11,7 +11,12 @@
 #define KWHT  "\x1B[37m"
 
 
-
+/**
+ * \fn TransactionFake()
+ * \brief Création d'une fausse transaction expert ou medium
+ *
+ * \return Retourne rien
+ */
 TransactionFake::TransactionFake(int transac) : Transaction()
 {
     
@@ -49,7 +54,12 @@ TransactionFake::TransactionFake(int transac) : Transaction()
 
 
 
-
+/**
+ * \fn toString()
+ * \brief Retourne les paramètres d'une transaction
+ *
+ * \return Chaine de caractère
+ */
 std::string TransactionFake::toString()
 {
     std::string description = _nom;
@@ -65,7 +75,12 @@ std::string TransactionFake::toString()
     return description;
 }
 
-
+/**
+ * \fn medium()
+ * \brief creation d'une fausse transaction de niveau medium
+ *
+ * \return rien
+ */
 void TransactionFake::medium()
 {
     //cas d'une transaction fausse de niveau medium
@@ -97,6 +112,13 @@ void TransactionFake::medium()
         _preussite = 100-(_montant/10000*4)-(rand()%30);
 }
 
+
+/**
+ * \fn expert()
+ * \brief creation d'une fausse transaction de niveau expert
+ *
+ * \return rien
+ */
 void TransactionFake::expert()
 {
      //cas d'une transaction fausse de niveau expert
@@ -129,6 +151,13 @@ void TransactionFake::expert()
         _preussite = 100-(_montant/100000*4)-(rand()%30);
 }
 
+
+/**
+ * \fn evaluate()
+ * \brief evalue la transaction pour definir si elle réussit
+ *
+ * \return rien
+ */
 int TransactionFake::evaluate()
 {
     //Retourne un score et pas un montant
@@ -140,17 +169,35 @@ int TransactionFake::evaluate()
     return _montant;
 }
 
+
+/**
+ * \fn montant()
+ * \brief
+ *
+ * \return Retourne le montant de la transaction
+ */
 int TransactionFake::montant()
 {
     return _montant;
 }
 
+/**
+ * \fn suspicion()
+ * \brief
+ *
+ * \return Retourne le taux suspicion de la transaction
+ */
 int TransactionFake::suspicion()
 {
     return _suspicionRate;
 }
 
-
+/**
+ * \fn operator<<(std::ostream& os, TransactionFake& fake)
+ * \brief redefinition de l'opérateur <<
+ *
+ * \return
+ */
 std::ostream& operator<<(std::ostream& os, TransactionFake& fake)  
 {  
     os << "Ton taux de suspicion augmente de " << fake.suspicion() << "\n";  
