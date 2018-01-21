@@ -107,10 +107,10 @@ void Joueur_expert::fake(){
 	TransactionFake f(1);
 	int c=f.evaluate();
 	if(c<0){//si se que renvoie l'evaluate de la fausse transaction est negatif la transaction a echoué donc on retire la mise du capital mais le score ne bouge pas
-		_capital+=c;
+		(*this)+=c;
 	}
 	else{//sinon la transaction reussi donc on decremente le capital et in incremente le score.
-		_capital-=c;
+		(*this)+=(-c);
 		_score+=c;
 	}
 	//mise a jour du taux de suspicion.
@@ -134,7 +134,7 @@ void Joueur_expert::eval(int res,int montant){
 	}
 
 	//mise a jour du capital du joueur
-	_capital+=res;
+	(*this)+=res;
 	if(res<0){//si le resultat est négatif ca signifie que la transaction a echouer.
 		std::cout<<KRED<<"\nAhh quelle erreur vous perdez "<<-res<<" €"<<KNRM<<std::endl;
 	}

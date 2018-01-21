@@ -14,7 +14,7 @@ public:
     virtual void jouer() = 0;
     virtual int suspicion();
     virtual int score();
-
+    void operator+=(int montant);
 protected:
     std::string _nom;
     int _capital;

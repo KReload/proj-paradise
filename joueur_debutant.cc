@@ -110,7 +110,7 @@ void Joueur_debutant::eval(int res,int montant){
 	}
 
 	//mise a jour du capital du joueur
-	_capital+=res;
+	(*this)+=res;
 	if(res<0){//si le resultat est négatif ca signifie que la transaction a echouer.
 		std::cout<<KRED<<"\nAhh quelle erreur vous perdez "<<-res<<" €"<<KNRM<<std::endl;
 	}
