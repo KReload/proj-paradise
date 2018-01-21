@@ -65,6 +65,7 @@ void Joueur_debutant::jouer(){
 	for(i=0;i<10;i++){//creation des transactions que l'on va proposer au joueur
 		transactions.push_back(TransactionDebutant());
 	}
+	//affichage des transaction
 	std::cout<<"n°\t|\tnom\t\t\t|\tlieu\t\t\t|\tmontant\n"<<std::endl;
 	for(i=0;i<10;i++){
 		std::cout<<i+1<<"\t|\t";
@@ -75,7 +76,7 @@ void Joueur_debutant::jouer(){
 	std::string tmp;
 	std::cout<<Message::MessageP()<<std::endl;
 	std::cout<<"\nVeuillez tapper le n° de la transaction que vous souhaitez effectuer :\n"<<std::endl;
-	
+	//attente d'un choix de la part d'un joueur.
 	while(1>n or n>10){
 		try{
 			std::cin>>tmp;
@@ -84,13 +85,21 @@ void Joueur_debutant::jouer(){
 				throw std::exception();
 			}
 		}
-		catch(std::exception e){
+		catch(std::exception e){//traite les cas ou le joueur rentre des valeur aberante ou des lettres
 			std::cout<<KRED<<"\nErreur de format. Veuillez tapper un n° de transaction.\n"<<KNRM<<std::endl;
 		}
 	}
+	//lance l'affichage des résultats.
 	(*this).eval(transactions[n-1].evaluate(),transactions[n-1].montant());
 }
 
+
+/**
+ * \fn eval()
+ * \brief Fonction qui effectue un tour de jeu du joueur débutant.
+ *
+ * \return rien.
+ */
 void Joueur_debutant::eval(int res,int montant){
 
 
