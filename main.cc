@@ -75,11 +75,7 @@ int main()
             std::cin>>tmp;
     	}
     	if(i==0 and j->suspicion()>100){
-<<<<<<< HEAD
-	    	std::cout <<"La conformité t'as repéré, tu as été trop suspect"<<std::endl;	
-=======
 	    	std::cout <<KRED<<"La police viens vous arréter à cause de vos détournements de fond!"<<KNRM<<std::endl;	
->>>>>>> 0fa428fe3937a0985888dc985e0d24264cbba7e5
     		break;
         }
         

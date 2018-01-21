@@ -109,7 +109,8 @@ TransactionFake::TransactionFake(int transac) : Transaction()
 
 
         }
-    
+
+        std::cout << *this;        
 
         _preussite = 100-(_montant/100000*4)-(rand()%30);
     }
@@ -142,7 +143,6 @@ int TransactionFake::evaluate()
         std::cout<<KRED<<"\nQuel dommage ta transaction c'est faite intercepter par la police\n"<<KNRM<<std::endl;
 		return -_montant;
     }
-    std::cout << *this;
     std::cout<<KGRN<<"\nBien joué ta fausse transaction a reussie\n"<<KNRM<<std::endl;
     return _montant;
 }
