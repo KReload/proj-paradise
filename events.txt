@@ -1,4 +1,4 @@
-1 10 Le chef t'as pris en flagrant délit en train de contourner de l'argent ! Dire que c'est Jean-Pierre le fautif ?
+1 10 Le chef t'as pris en flagrant délit en train de détourner de l'argent ! Dire que c'est Jean-Pierre le fautif ?
 0 15 Bob veut t'emprunter un peu d'argent pour faire des activités. Faut-il que j'accepte ?
 1 20 Aïe aïe, la conformité est à l'autre bout de la porte et vous cherche. Se cacher ?
 0 5 Chocolatine ou pain au chocolat ? Votre patron vous regarde fixement et attend votre réponse... Oui ?
@@ -8,4 +8,16 @@
 1 10 La fatigue approche, prendre un jour de repos ?
 0 15 Le patron est dans le coin, le fixer du regard ?
 0 10 Se pencher sur votre chaise ? 
-0 20 Vous avez un projet à finir ... Vous n'êtes pas serein ? 
+0 20 Vous avez un projet à finir ... Vous êtes serein ?
+0 20 Votre ordi vient de ce casser voulez vous le jeter?
+0 5 Vous avez locasion de proposer un pot-de-vin à la police. Vous tentez le coup?
+1 20 Vous avez locasion de proposer un pot-de-vin à la police. Vous tentez le coup?
+0 10 Un collegue vous propose de partir en vacance avec lui au caraibe vous accepté?
+1 10 Un collegue vous propose de partir en vacance avec lui au Etats-Unis vous accepté?
+1 10 Le patron vous propose de jouer à pile ou face avec lui. Vous choisissez pile?
+0 5 Le patron vous propose de jouer à pile ou face avec lui. Vous choisissez pile?
+0 5 Bob vous propose de faire un concours de boulette de papier. Vous acceptez?
+1 5 Le cours du Bitcoins augmente, vous investissez?
+1 10 Bob veux vous donner de l'argent. Vous acceptez?
+0 10 Jean-Pierre veux vous donner de l'argent. vous acceptez?
+0 0 La police vous arrète dans la rue. Vous prenez la fuite?
