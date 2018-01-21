@@ -2,6 +2,12 @@
 #include <cstdlib>
 #include <string>
 
+/**
+ * \fn TransactionDebutant()
+ * \brief Création d'une transaction débutante aléatoire
+ *
+ * \return rien.
+ */
 TransactionDebutant::TransactionDebutant() : Transaction()
 {
     _montant = (rand()%10 + 1)*1000;
@@ -10,6 +16,13 @@ TransactionDebutant::TransactionDebutant() : Transaction()
     _preussite = 100-(_montant/1000*4)-(rand()%30);
 }
 
+
+/**
+ * \fn toString()
+ * \brief Affiche les paramètres de la transaction
+ *
+ * \return La chaine de caractères correspondante.
+ */
 std::string TransactionDebutant::toString()
 {
     std::string description = _nom;
@@ -30,6 +43,12 @@ std::string TransactionDebutant::toString()
     return description;
 }
 
+
+/**
+ * \fn evaluate()
+ * \brief Regarde si la transaction a réussi
+ * \return Retourne le montant gagné ou perdu
+ */
 int TransactionDebutant::evaluate()
 {
 	if((rand()%100)>_preussite){
@@ -38,6 +57,11 @@ int TransactionDebutant::evaluate()
     return _montant+rand()%5*_montant/10;
 }
 
+/**
+ * \fn montant()
+ * \brief 
+ * \return Retourne le montant de la transaction
+ */
 int TransactionDebutant::montant()
 {
     return _montant;
