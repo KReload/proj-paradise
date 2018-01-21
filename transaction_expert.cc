@@ -5,8 +5,8 @@
 TransactionExpert::TransactionExpert() : Transaction()
 {
     _montant = (rand()%10 + 1)*100000;
-    _lieux= Lieu::villeM();
-    _nom = Nom::nomM();
+    _lieux= Lieu::villeG();
+    _nom = Nom::nomG();
     _preussite = 100-(_montant/100000*4)-(rand()%50);
 }
 
