@@ -123,10 +123,10 @@ void Joueur_debutant::eval(int res,int montant){
 }
 
 /**
- * \fn nom()
- * \brief Fonction de get pour recuperer le nom du joueur.
+ * \fn eval()
+ * \brief Fonction qui effectue l'affichage en fonction du résultat de la transaction choisit.
  *
- * \return le nom du joueur.
+ * \return rien.
  */
 std::string Joueur_debutant:: nom(){
 	return _nom;

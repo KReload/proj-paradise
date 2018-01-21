@@ -11,6 +11,8 @@ public:
     int evaluate();
     int montant();
     int suspicion();
+    void medium();
+    void expert();
 protected:
     float _suspicionRate;
 };

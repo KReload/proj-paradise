@@ -40,79 +40,10 @@ TransactionFake::TransactionFake(int transac) : Transaction()
     std::cin >> _lieux;
 
     if(transac==0){
-        //cas d'une transaction fausse de niveau medium
-        _suspicionRate = ((float)_montant/100000.0)*(rand()%40);
-
-        if (_montant < 10001){ //cas ou le montant correspond a une petite transaction
-            if(Nom::isP(_nom)){//le nom est bien un nom de petite transaction
-                _suspicionRate = _suspicionRate/2;
-            }
-            if(Lieu::isP(_lieux)){//le lieu est bien un nom de petite ville
-                _suspicionRate = _suspicionRate/2;
-            }
-
-        }
-        else if(_montant < 100001){
-            if(Nom::isM(_nom)){//le nom est bien un nom de moyenne transaction
-                _suspicionRate = _suspicionRate/2;
-            }
-            if(Lieu::isM(_lieux)){//le lieu est bien un nom de moyenne ville
-                _suspicionRate = _suspicionRate/2;
-            }
-
-
-        }
-        else{
-            if(Nom::isG(_nom)){//le nom est bien un nom de grande transaction
-                _suspicionRate = _suspicionRate/2;
-            }
-            if(Lieu::isG(_lieux)){//le lieu est bien un nom de grande ville
-                _suspicionRate = _suspicionRate/2;
-            }
-
-
-        }
-    
-
-        _preussite = 100-(_montant/10000*4)-(rand()%30);
+        (*this).medium();
     }
     else{
-        //cas d'une transaction fausse de niveau expert
-        _suspicionRate = ((float)_montant/1000000.0)*(rand()%40);
-
-        if (_montant < 10001){ //cas ou le montant correspond a une petite transaction
-            if(Nom::isP(_nom)){//le nom est bien un nom de petite transaction
-                _suspicionRate = _suspicionRate/2;
-            }
-            if(Lieu::isP(_lieux)){//le lieu est bien un nom de petite ville
-                _suspicionRate = _suspicionRate/2;
-            }
-
-        }
-        else if(_montant < 100001){
-            if(Nom::isM(_nom)){//le nom est bien un nom de moyenne transaction
-                _suspicionRate = _suspicionRate/2;
-            }
-            if(Lieu::isM(_lieux)){//le lieu est bien un nom de moyenne ville
-                _suspicionRate = _suspicionRate/2;
-            }
-
-
-        }
-        else{
-            if(Nom::isG(_nom)){//le nom est bien un nom de grande transaction
-                _suspicionRate = _suspicionRate/2;
-            }
-            if(Lieu::isG(_lieux)){//le lieu est bien un nom de grande ville
-                _suspicionRate = _suspicionRate/2;
-            }
-
-
-        }
-
-        std::cout << *this;        
-
-        _preussite = 100-(_montant/100000*4)-(rand()%30);
+        (*this).expert();
     }
 }
 
@@ -135,6 +66,68 @@ std::string TransactionFake::toString()
 }
 
 
+void TransactionFake::medium()
+{
+    //cas d'une transaction fausse de niveau medium
+        _suspicionRate = ((float)_montant/100000.0)*(rand()%40);
+        if (_montant < 10001){ //cas ou le montant correspond a une petite transaction
+            if(Nom::isP(_nom)){//le nom est bien un nom de petite transaction
+                _suspicionRate = _suspicionRate/2;
+            }
+            if(Lieu::isP(_lieux)){//le lieu est bien un nom de petite ville
+                _suspicionRate = _suspicionRate/2;
+            }
+        }
+        else if(_montant < 100001){
+            if(Nom::isM(_nom)){//le nom est bien un nom de moyenne transaction
+                _suspicionRate = _suspicionRate/2;
+            }
+            if(Lieu::isM(_lieux)){//le lieu est bien un nom de moyenne ville
+                _suspicionRate = _suspicionRate/2;
+            }
+        }
+        else{
+            if(Nom::isG(_nom)){//le nom est bien un nom de grande transaction
+                _suspicionRate = _suspicionRate/2;
+            }
+            if(Lieu::isG(_lieux)){//le lieu est bien un nom de grande ville
+                _suspicionRate = _suspicionRate/2;
+            }
+        }
+        _preussite = 100-(_montant/10000*4)-(rand()%30);
+}
+
+void TransactionFake::expert()
+{
+     //cas d'une transaction fausse de niveau expert
+        _suspicionRate = ((float)_montant/1000000.0)*(rand()%40);
+        if (_montant < 10001){ //cas ou le montant correspond a une petite transaction
+            if(Nom::isP(_nom)){//le nom est bien un nom de petite transaction
+                _suspicionRate = _suspicionRate/2;
+            }
+            if(Lieu::isP(_lieux)){//le lieu est bien un nom de petite ville
+                _suspicionRate = _suspicionRate/2;
+            }
+        }
+        else if(_montant < 100001){
+            if(Nom::isM(_nom)){//le nom est bien un nom de moyenne transaction
+                _suspicionRate = _suspicionRate/2;
+            }
+            if(Lieu::isM(_lieux)){//le lieu est bien un nom de moyenne ville
+                _suspicionRate = _suspicionRate/2;
+            }
+        }
+        else{
+            if(Nom::isG(_nom)){//le nom est bien un nom de grande transaction
+                _suspicionRate = _suspicionRate/2;
+            }
+            if(Lieu::isG(_lieux)){//le lieu est bien un nom de grande ville
+                _suspicionRate = _suspicionRate/2;
+            }
+        }
+        std::cout << *this;        
+        _preussite = 100-(_montant/100000*4)-(rand()%30);
+}
 
 int TransactionFake::evaluate()
 {
