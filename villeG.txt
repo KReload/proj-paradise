@@ -26,4 +26,8 @@ Floride
 Houston
 Philadelphie
 San-Fransisco
+<<<<<<< HEAD
 Shangai
+=======
+Shangai
+>>>>>>> 314d1e209cadccdd5bd9e55d29e3e1127e0f13dd
